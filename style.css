@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffb6c1, #ffd6e0, #fff0f5);
+    color: #5a2433;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.screen {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    animation: appear 0.7s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.bear {
+    font-size: 100px;
+    animation: bounce 2s infinite;
+}
+
+h1 {
+    font-size: 48px;
+    color: #d6336c;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #b52b59;
+    margin: 20px 0;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 45px 35px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(190, 50, 100, 0.2);
+}
+
+.heart,
+.huge-heart {
+    font-size: 80px;
+    animation: heartbeat 1.2s infinite;
+}
+
+.message {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.message p {
+    margin: 12px 0;
+}
+
+.special {
+    font-weight: bold;
+    color: #d6336c;
+    font-size: 21px;
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    padding: 16px 28px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+    margin: 8px;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+#openLetter,
+#surpriseButton {
+    background: #d6336c;
+    color: white;
+    box-shadow: 0 8px 20px rgba(214, 51, 108, 0.3);
+}
+
+.yes {
+    background: #ff4f81;
+    color: white;
+}
+
+.no {
+    background: #eeeeee;
+    color: #555;
+}
+
+.big {
+    font-size: 23px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.hug {
+    font-size: 80px;
+    margin: 20px;
+}
+
+.couple {
+    font-size: 75px;
+    margin: 25px;
+}
+
+.sparkles {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+/* Floating hearts all over the screen */
+
+.floating-heart {
+    position: fixed;
+    top: -50px;
+    pointer-events: none;
+    z-index: 10;
+    animation: heartFall linear forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes heartFall {
+    from {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    .bear {
+        font-size: 75px;
+    }
+
+    button {
+        width: 90%;
+    }
+}
