@@ -20,15 +20,11 @@ openLetter.addEventListener("click", () => {
 yesButton.addEventListener("click", async () => {
 
     try {
-        await fetch("/api/forgive", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                answer: "yes"
-            })
-        });
+        yesButton.addEventListener("click", () => {
+    letter.classList.add("hidden");
+    finalPage.classList.remove("hidden");
+    createHearts(35);
+});
     } catch (error) {
         console.log("No worries ❤️");
     }
