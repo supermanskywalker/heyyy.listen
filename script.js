@@ -89,8 +89,9 @@ function createHearts(number = 15) {
 
         heart.className = "floating-heart";
 
-        heart.innerHTML =
-            heartTypes[Math.floor(Math.random() * heartTypes.length)];
+       heart.textContent = heartTypes[
+    Math.floor(Math.random() * heartTypes.length)
+];
 
         heart.style.left = Math.random() * 100 + "vw";
 
